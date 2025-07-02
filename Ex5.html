@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise5</title>
+</head>
+
+<body>
+    <div>
+        <img src="./img1.webp" alt="fjords" id="img1">
+
+
+        <button type="button" id="changeImageBtn" onclick="handleClickChangeImage()">
+            Click me
+        </button>
+    </div>
+
+    <script>
+        const image1 = document.getElementById('img1');
+        const changeImageBtn = document.getElementById('changeImageBtn');
+
+        // cach 1 : 
+        changeImageBtn.addEventListener('click', () => {
+            image1.src = './img2.jpg';
+        })
+
+        // cách 2 :
+        /*
+         const image1 = document.getElementById('img1');
+        const handleClickChangeImage = () => {
+            image1.src = './img2.jpg';
+        }
+            */
+    </script>
+</body>
+
+</html>

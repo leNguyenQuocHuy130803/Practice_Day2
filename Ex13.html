@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+    <style>
+        .error-border {
+            border: 2px solid red;
+        }
+
+        #nameError {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" id="nameInput" placeholder="Nhập tên">
+    <button onclick="validateForm()">Gửi</button>
+    <p id="nameError"></p>
+
+    <script>
+        function validateForm() {
+            const nameInput = document.getElementById("nameInput");
+            const nameError = document.getElementById("nameError");
+            const value = nameInput.value.trim();
+
+            if (value === "") {
+                nameInput.classList.add("error-border");
+                nameError.textContent = "Vui lòng nhập tên";
+            } else {
+                nameInput.classList.remove("error-border");
+                nameError.textContent = "";
+                alert("Chào bạn, " + value + "!");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

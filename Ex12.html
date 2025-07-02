@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Greeting</title>
+</head>
+
+<body>
+
+    <p id="greetingText"></p>
+
+    <script>
+        const greeting = document.getElementById("greetingText");
+        const hour = new Date().getHours();
+
+        if (hour >= 5 && hour < 12) {
+            greeting.textContent = "Good Morning";
+        } else if (hour >= 12 && hour < 18) {
+            greeting.textContent = "Good Afternoon";
+        } else {
+            greeting.textContent = "Good Evening";
+        }
+
+        /*
+        cách 2 :
+        function showGreeting() {
+      const greeting = document.getElementById("greetingText");
+      const hour = new Date().getHours();
+
+      if (hour >= 5 && hour < 12) {
+        greeting.textContent = "Good Morning";
+      } else if (hour >= 12 && hour < 18) {
+        greeting.textContent = "Good Afternoon";
+      } else {
+        greeting.textContent = "Good Evening";
+      }
+    }
+        */
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise4</title>
+</head>
+
+<body>
+    <div>
+        <button class="deleteBtn" onclick='functionRemove()'>
+            Click me
+        </button>
+
+        <ul id="itemList">
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+            <li>e</li>
+        </ul>
+    </div>
+
+    <script>
+
+        const btn = document.querySelector('.deleteBtn');
+
+        btn.addEventListener('click', () => {
+            const list = document.getElementById('itemList');
+            list.removeChild(list.firstElementChild);
+        })
+
+        /*
+        // cách 2 :
+        functionRemove = () => {
+            const list = document.getElementById('itemList');
+            list.removeChild(list.firstElementChild);
+        }
+            */
+    </script>
+</body>
+
+</html>

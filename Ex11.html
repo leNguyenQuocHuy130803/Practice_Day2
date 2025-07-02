@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" id="hideParaBtn">
+        click to Hidden
+    </button>
+
+    <p id="infoPara">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem quo consequuntur dolore perspiciatis ab
+        dicta reprehenderit natus quam. Sit nostrum laudantium doloremque fuga molestias unde ipsa vel quae? A, nemo?
+        Quasi nobis quo libero sequi earum nam aperiam qui animi ducimus facilis perferendis non harum quae porro
+        veniam, nulla natus! Harum, a assumenda quibusdam saepe dolores dignissimos voluptas ullam iure!
+    </p>
+
+    <script>
+
+        const btn = document.getElementById('hideParaBtn');
+        const para = document.getElementById('infoPara');
+
+        btn.addEventListener('click', () => {
+            para.hidden = true;
+        })
+
+
+        /*
+        // cách 2 :
+        document.getElementById('hideParaBtn').addEventListener('click', () => {
+                document.getElementById('infoPara').hidden = true;
+
+            })
+                */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+
+        <input type="text" id="infor" value="name">
+        <button type="button" id="BtnInfor" onclick="handleclick()">
+            click me
+        </button>
+    </div>
+
+    <script>
+
+
+        // cách 1 :
+        const Inputname = document.getElementById('infor');
+        const btn = document.getElementById('BtnInfor');
+        btn.addEventListener('click', () => {
+            alert(Inputname.value);
+        })
+
+        /*
+        // cách 2 :
+        const handleclick = () => {
+
+            const Inputname = document.getElementById('infor');
+            alert(Inputname.value);
+        }
+            */
+    </script>
+
+
+</body>
+
+</html>

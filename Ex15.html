@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Character Counter</title>
+</head>
+
+<body>
+
+    <textarea id="bioInput" rows="4" cols="40" oninput="updateCount()"></textarea>
+    <p id="charCount">Còn lại: 200 ký tự</p>
+
+    <script>
+        const maxChars = 200;
+
+        const updateCount = () => {
+            const textarea = document.getElementById("bioInput");
+            const counter = document.getElementById("charCount");
+            const remaining = maxChars - textarea.value.length;
+            counter.textContent = "Còn lại: " + remaining + " ký tự";
+        }
+    </script>
+
+</body>
+
+</html>

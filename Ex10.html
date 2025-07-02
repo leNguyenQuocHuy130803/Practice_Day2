@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Email</title>
+</head>
+
+<body>
+    <input type="email" value="" id="email">
+    <button type="button" onclick="handleclick()">Click me</button>
+
+    <script>
+        const validateEmail = (email) => {
+            return String(email)
+                .toLowerCase()
+                .match(
+                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                );
+        };
+
+        const handleclick = () => {
+            const emailValue = document.getElementById("email").value;  // .value để lấy giá trị bên trong ô input
+            console.log(emailValue);  // xem giá trị bên trong ô input của email ( thử xóa .value đi log là thấy khác)
+            const isValidateEmail = validateEmail(emailValue);  // phải lấy dòng trên nó mớ bt dc cái emailvalue là gì
+
+            if (!isValidateEmail) {
+                alert('Email không hợp lệ');
+            } else {
+                alert('Email hợp lệ');
+            }
+        };
+    </script>
+</body>
+
+</html>

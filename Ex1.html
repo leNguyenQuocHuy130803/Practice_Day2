@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise1</title>
+</head>
+
+<body>
+    <div id="textDisplay">
+        Hoc Javascript
+    </div>
+    <button id="changeTextBtn" onclick="handleClick()">Click Me</button>
+
+    <script>
+        const changeTextBtn = document.getElementById('changeTextBtn');
+        const textDisplay = document.getElementById('textDisplay');
+
+        //cách 1:
+        changeTextBtn.addEventListener('click', () => {
+            textDisplay.innerText = 'Hello, JavaScript!';
+        })
+
+
+        /* cách 2 : thường dùng
+        const handleClick = () => {
+            textDisplay.innerText = 'Hello, JavaScript!';
+        }
+        */
+    </script>
+</body>
+
+</html>

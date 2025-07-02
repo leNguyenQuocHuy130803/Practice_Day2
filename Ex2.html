@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excersise2</title>
+    <style>
+        .highlight {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        Nội dung sẽ được change
+    </div>
+    <button type="button" class="toggleHighlightBtn" onclick="HandleClickToggle()">
+        click me
+    </button>
+
+    <script>
+        const changeText = document.querySelector('.box');
+        const btn = document.querySelector('.toggleHighlightBtn');
+
+        /*
+        btn.addEventListener('click', () => {
+            changeText.classList.toggle('highlight');
+        })
+*/
+        // cách 2:
+        const HandleClickToggle = () => {
+            changeText.classList.toggle('highlight');
+        }
+    </script>
+</body>
+
+</html>
